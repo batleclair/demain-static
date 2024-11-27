@@ -1,0 +1,11 @@
+$roundings: 5, 10, 15, 20;
+
+.round{
+  border-radius: 100em;
+}
+
+@each $value in $roundings {
+  .ml-#{$value}{
+    border-radius: #{$value}px;
+  }
+}
