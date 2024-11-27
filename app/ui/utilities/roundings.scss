@@ -5,7 +5,7 @@ $roundings: 5, 10, 15, 20;
 }
 
 @each $value in $roundings {
-  .ml-#{$value}{
+  .round-#{$value}{
     border-radius: #{$value}px;
   }
 }

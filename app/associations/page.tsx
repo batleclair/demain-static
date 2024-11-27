@@ -1,5 +1,7 @@
 export default function Page() {
   return (
-    <h1 className="fc-1n">Associations</h1>
+    <div className="ctn">
+      <h1 className="fc-1n">Associations</h1>
+    </div>
   )
 }

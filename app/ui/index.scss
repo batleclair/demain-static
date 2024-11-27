@@ -1,6 +1,11 @@
 @import "config/colors.scss";
 @import "config/fonts.scss";
+@import "config/resp.scss";
 
+@import "utilities/flexboxes.scss";
 @import "utilities/margins.scss";
 @import "utilities/positions.scss";
+@import "utilities/sizes.scss";
 @import "utilities/roundings.scss";
+
+@import "components/navbar.scss";
