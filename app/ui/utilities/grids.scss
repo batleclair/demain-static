@@ -1,0 +1,28 @@
+@import "../config/resp.scss";
+
+.grid{
+  display: grid;
+}
+
+.row{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+@for $fr from 1 through 12 {
+  .col-#{$fr}{
+    grid-column: span #{$fr};
+  }
+
+  @media(max-width: $bp-s){
+    .col-#{$fr}-s {
+      grid-column: span #{$fr};
+    }
+  }
+
+  @media(max-width: $bp-m){
+    .col-#{$fr}-m {
+      grid-column: span #{$fr};
+    }
+  }
+}
