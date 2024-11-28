@@ -9,6 +9,10 @@ $clr-3n: #81D2C7;
 $clr-4n: #FFC83D;
 $clr-5n: #FB4D3D;
 
+$clr-6n: rgb(220, 220, 220);
+$clr-6l: rgb(240, 240, 240);
+$clr-6d: rgb(150, 150, 150);
+
 $colors: (
   "1n": $clr-1n,
   "1d": $clr-1d,
@@ -18,6 +22,9 @@ $colors: (
   "3n": $clr-3n,
   "4n": $clr-4n,
   "5n": $clr-5n,
+  "6n": $clr-6n,
+  "6l": $clr-6l,
+  "6d": $clr-6d,
   "white": white,
   "black": black
 );

@@ -1,0 +1,22 @@
+.highlight{
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0rem;
+    width: 100%;
+    height: 30%;
+    background-color: $clr-1n;
+    opacity: 0.2;
+  }
+}
+
+.text-middle{
+  align-content: center;
+  text-align: center;
+}
+
+.nowrap{
+  white-space: nowrap;
+}

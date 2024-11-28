@@ -1,0 +1,19 @@
+@each $id, $hex in $colors {
+  .border-#{$id}{
+    border: solid 1px #{$hex};
+  }
+  .border-b-#{$id}{
+    border-bottom: solid 1px #{$hex};
+  }
+  .border-t-#{$id}{
+    border-top: solid 1px #{$hex};
+  }
+}
+
+.outline-1n{
+  outline: 1px solid $clr-1n;
+}
+
+.border-0{
+  border: none;
+}

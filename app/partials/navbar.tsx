@@ -13,7 +13,7 @@ export function Navbar() {
   };
 
   return (
-    <div className="bg-2l pos-abs top-0 w-100">
+    <div className="bg-white pos-abs top-0 w-100 z-2">
       <button type='button' className='m-10 pos-abs left-0 burger icon round w-30px h-30px fs-20 z-1' onClick={menuToggle}>menu</button>
       <nav className="ctn navbar flex w-100 ai-center" aria-expanded={expanded}>
         <Link href="/">
@@ -33,13 +33,13 @@ export function Navbar() {
           />
         </Link>
 
-        <div className="flex">
-          <Link className={`link ${pathname === '/' ? 'active' : ''} w-20px mr-10 ml-10`} href="/" onClick={menuToggle}>
+        <div className="flex ai-center">
+          <Link className={`link ${pathname === '/' ? 'active' : ''} w-20px mr-10 ml-10 zoom-h`} href="/" onClick={menuToggle}>
             <span className="icon">home</span>
           </Link>
 
           <Link
-            className={`link ${pathname === '/entreprises' ? 'active' : ''} w-100px mr-10 ml-10`}
+            className={`link ${pathname === '/entreprises' ? 'active' : ''} w-100px mr-10 ml-10 zoom-h`}
             href="/entreprises"
             onClick={menuToggle}
           >
@@ -47,11 +47,19 @@ export function Navbar() {
           </Link>
 
           <Link
-            className={`link ${pathname === '/associations' ? 'active' : ''} w-100px  mr-10 ml-10`}
+            className={`link ${pathname === '/associations' ? 'active' : ''} w-100px  mr-10 ml-10 zoom-h`}
             href="/associations"
             onClick={menuToggle}
           >
             Associations
+          </Link>
+
+          <Link
+            className="w-100px  mr-10 ml-10 btn-h fc-white bg-1n bg-to-1d"
+            href=""
+            onClick={menuToggle}
+          >
+            Contact
           </Link>
         </div>
       </nav>

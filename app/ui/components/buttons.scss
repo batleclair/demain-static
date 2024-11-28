@@ -1,0 +1,36 @@
+@mixin hover{
+  transition: ease-in-out 0.1s;
+  &:hover{
+    transition: ease-in-out 0.1s;
+  }
+}
+
+@mixin btn {
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+
+@mixin zoom-h{
+  @include hover;
+  scale: 100%;
+  &:hover{
+    scale: 110%;
+  }
+}
+
+.hover{
+  @include hover;
+}
+
+.btn {
+  @include btn;
+}
+
+.zoom-h{
+  @include zoom-h;
+}
+
+.btn-h{
+  @include btn;
+  @include zoom-h
+}

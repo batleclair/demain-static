@@ -23,3 +23,20 @@
 .ai-center{
   align-items: center;
 }
+
+.ai-top{
+  align-items: start;
+}
+
+.dir-col{
+  flex-direction: column;
+}
+
+.block{
+  display: block;
+}
+
+.flex-0{
+  flex-shrink: 0;
+  flex-grow: 0;
+}

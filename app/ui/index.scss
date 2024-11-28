@@ -2,6 +2,7 @@
 @import "config/fonts.scss";
 @import "config/resp.scss";
 
+@import "utilities/borders.scss";
 @import "utilities/flexboxes.scss";
 @import "utilities/margins.scss";
 @import "utilities/positions.scss";
@@ -9,5 +10,10 @@
 @import "utilities/sizes.scss";
 @import "utilities/roundings.scss";
 @import "utilities/images.scss";
+@import "utilities/texts.scss";
 
 @import "components/navbar.scss";
+@import "components/buttons.scss";
+@import "components/carousels.scss";
+
+@import "pages/home.scss";
