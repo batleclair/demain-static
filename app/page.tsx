@@ -4,8 +4,21 @@ import { AssoLogos } from '@/app/partials/asso_logos'
 
 export default function Home() {
 
+  const stars = () => {
+    return(
+      <div className='flex'>
+        <p><span className="icon fill-1 fc-4n fs-20">star</span></p>
+        <p><span className="icon fill-1 fc-4n fs-20">star</span></p>
+        <p><span className="icon fill-1 fc-4n fs-20">star</span></p>
+        <p><span className="icon fill-1 fc-4n fs-20">star</span></p>
+        <p><span className="icon fill-1 fc-4n fs-20">star</span></p>
+      </div>
+    )
+  };
+
+
   return (
-    <div>
+    <div className='pt-20'>
       <div className='ctn flex dir-col ai-center mb-40'>
         <div className='grid max-w-1200'>
           <div className="row grid-gap-30">
@@ -114,6 +127,67 @@ export default function Home() {
         />
       </div>
 
+
+      <div className="ctn bg-white pb-40">
+        <div className="pt-20 pb-20 mb-10">
+          <h2 className="fc-1n fs-20 flex ai-center jc-center"><span className='fw-9 icon fs-30 w-40px block'>add</span> d'impact pour les salarié.e.s</h2>
+          <p className='text-middle'>Nous accompagnons chaque salarié éligible pour que son expérience en mécénat soit une réussite</p>
+        </div>
+
+        <div className="row grid-gap-20">
+          <blockquote className="mb-40 col-4 col-12-m">
+            <div className="flex mb-20">
+              <Image src="/home/karim.jpg" alt="Portrait de Karim" width={40} height={40} className='round mr-20'></Image>
+              <div>
+                <cite className="fw-6 block">Karim</cite>
+                <cite>Consultant IT</cite>
+              </div>
+            </div>
+            <div className="pt-10 w-100">
+              <p className='mb-10'>Grâce à Demain, mon entreprise m’a permis de réaliser une mission pro bono pour aider une association dans le cadre de sa transformation digitale</p>
+              {stars()}
+            </div>
+          </blockquote>
+
+          <blockquote className="mb-40 col-4 col-12-m">
+            <div className="flex mb-20">
+              <Image src="/home/patricia.jpg" alt="Portrait de Patricia" width={40} height={40} className='round mr-20'></Image>
+              <div>
+                <cite className="fw-6 block">Patricia</cite>
+                <cite>Responsable RH</cite>
+              </div>
+            </div>
+            <div className="pt-10 w-100">
+              <p className='mb-10'>En me laissant consacrer 3 jours par mois à une association qui m’est chère, mon entreprise m’a permis de retrouver du sens dans mon métier et un meilleur équilibre personnel</p>
+              {stars()}
+            </div>
+          </blockquote>
+
+          <blockquote className="mb-40 col-4 col-12-m">
+            <div className="flex mb-20">
+              <Image src="/home/julie.jpg" alt="Portrait de Julie" width={40} height={40} className='round mr-20'></Image>
+              <div>
+                <cite className="fw-6 block">Julie</cite>
+                <cite>Chargée de Marketing Digital</cite>
+              </div>
+            </div>
+            <div className="pt-10 w-100">
+              <p className='mb-10'>Demain m’a permis de trouver une asso géniale dans laquelle exercer et développer de nouvelles compétences en lien avec mon projet de reconversion</p>
+              {stars()}
+            </div>
+            </blockquote>
+          </div>
+      </div>
+
+      <div className="ctn bg-6l pb-40">
+        <div className="pt-20 pb-20 mb-10">
+          <h2 className="fc-1n fs-20 flex ai-center jc-center"><span className='fw-9 icon fs-30 w-40px block'>add</span> d'impact pour les association</h2>
+          <p className='text-middle'>Nous collaborons avec des associations & fondations d'intérêt général partout en France</p>
+        </div>
+        <AssoLogos></AssoLogos>
+      </div>
+
+
       <div className="bg-white p-50 w-100 ctn">
         <div className="flex dir-col ai-center">
           <div className="pb-50 grid max-w-1200">
@@ -122,7 +196,7 @@ export default function Home() {
                 <h2 className="fc-1n fs-16">Nos services</h2>
                 <h2 className="mb-10 md-resp-pt-20 fs-30">Demain Works propose un accompagnement <span className="highlight fc-1n fw-6">end-to-end</span></h2>
                 <p className="mb-20">Nous accompagnons nos partenaires sur l'ensemble des besoins liés à la réalisation de mécénat de compétences, du cahier des charges au retour d'expérience</p>
-                <ul>
+                <ul className='mb-20'>
                   <li className='flex ai-center mb-10'>
                     <span className="icon fs-30 fc-3n w-40px block fw-9 flex-0">task_alt</span>
                     <span>Identification et pré-qualification de missions adaptées aux critères des partenaires</span>
@@ -137,6 +211,10 @@ export default function Home() {
                   </li>
 
                 </ul>
+
+                <Link href="/entreprises" className='btn-h border-1n bg-white bg-to-2l fc-1n fw-5 text-middle block w-fit'>
+                  → En savoir plus sur nos services
+                </Link>
               </div>
               <div className="col-6 col-12-m">
                 <Image
@@ -152,12 +230,19 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="ctn bg-6l pb-40">
-        <div className="pt-20 pb-20 mb-10">
-          <h2 className="fc-1n fs-20 flex ai-center jc-center"><span className='fw-9 icon fs-30 w-40px block'>add</span> d'impact pour les association</h2>
-          <p className='text-middle'>Nous accompagnons les associations & fondations d'intérêt général partout en France</p>
+
+      <div className="ctn bg-2l">
+        <div className="pt-50 pb-50 flex dir-col ai-center max-w-600 margin-center">
+          <h2 className="mb-10 fs-30 text-middle">Vous souhaitez réaliser du mécénat de compétences ?</h2>
+          <p className='text-middle mb-20'>L'équipe Demain.Works est à votre écoute. Laissez-nous vos coordonnées afin d'échanger sur vos besoins et vos objectifs.</p>
+          <Link
+            className="btn-h fc-white bg-1n bg-to-1d"
+            href=""
+          >
+            Nous contacter
+          </Link>
+
         </div>
-        <AssoLogos></AssoLogos>
       </div>
 
     </div>

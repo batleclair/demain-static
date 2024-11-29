@@ -33,6 +33,10 @@ $heights: 10, 20, 25, 30, 40, 50, 100, 150, 200, 300, 400, 500;
   height: 100%;
 }
 
+.h-auto{
+  height: auto;
+}
+
 .min-h-screen{
   height: calc(100vh - 50px);
 }
@@ -41,6 +45,9 @@ $heights: 10, 20, 25, 30, 40, 50, 100, 150, 200, 300, 400, 500;
   width: 0;
 }
 
+.w-fit{
+  width: fit-content;
+}
 .scale-110{
  scale: 110%;
 }
