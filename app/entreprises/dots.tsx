@@ -2,10 +2,11 @@
 
 import { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper as SwiperType } from 'swiper';
 import 'swiper/css'
 
 export function Dots() {
-  const dotsRef = useRef(null);
+  const dotsRef = useRef<SwiperType | null>(null);
   const [activeDot, setActiveDot] = useState(0);
   const handleSlideTo = (index: number, ref: any) => {
     if (ref.current) ref.current.slideTo(index - 1);

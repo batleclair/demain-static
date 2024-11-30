@@ -2,6 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper as SwiperType } from 'swiper';
 import 'swiper/css'
 
 export function Cards() {
@@ -31,7 +32,7 @@ export function Cards() {
     if (ref.current) ref.current.slideTo(index - 1);
   };
   const [activeIndex, setActiveIndex] = useState(0);
-  const cardsRef = useRef(null);
+  const cardsRef = useRef<SwiperType | null>(null);
   return (
     <>
       <div className="col-6 col-12-m">
