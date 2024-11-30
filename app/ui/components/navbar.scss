@@ -90,7 +90,7 @@
   }
 }
 
-.navbar[aria-expanded="true"]{
+.navbar.expanded {
   @media (max-width: $bp-s) {
     transform: translateX(0%);
     transition: ease-in-out 0.2s;

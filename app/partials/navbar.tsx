@@ -15,7 +15,7 @@ export function Navbar() {
   return (
     <div className="bg-white pos-abs top-0 w-100 z-2">
       <button type='button' className='m-10 pos-abs left-0 burger icon round w-30px h-30px fs-20 z-1' onClick={menuToggle}>menu</button>
-      <nav className="ctn navbar flex w-100 ai-center" aria-expanded={expanded}>
+      <nav className={`ctn navbar flex w-100 ai-center ${ expanded ? "expanded" : "" }`}>
         <Link href="/">
           <Image
             src="/logo_dark.svg"
