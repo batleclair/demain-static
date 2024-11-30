@@ -5,15 +5,18 @@ import Image from 'next/image'
 import { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
+import { Dots } from '@/app/entreprises/dots'
+import { Cards } from '@/app/entreprises/cards'
 
 export default function Page() {
-  const swiperRef = useRef(null);
+  const cardsRef = useRef(null);
 
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleSlideTo = (index: number) => {
-    if (swiperRef.current) swiperRef.current.slideTo(index - 1);
+  const handleSlideTo = (index: number, ref: any) => {
+    if (ref.current) ref.current.slideTo(index - 1);
   };
+
 
   return (
     <div>
@@ -97,50 +100,7 @@ export default function Page() {
 
       <div className="ctn flex dir-col ai-center bg-white pt-40 pb-40">
         <div className="row grid-gap-30 mb-20 max-w-1200">
-          <div className="col-6 col-12-m">
-            <h2 className="fc-1n fs-16">Les finalités</h2>
-            <h2 className="mb-10 md-resp-pt-20 fs-30">Pour quels objectifs RH ?</h2>
-            <p className="mb-20">Demain Works vous accompagne afin de définir un programme sur-mesure qui réponde à vos problématiques RH et aux attentes de vos collaborateurs en matière d'engagement sociétal</p>
-            <div className="flex flex-wrap gap-10">
-              <button key={1} type="button" className={`round pr-10 pl-10 pt-5 pb-5 ${activeIndex === 0 ? 'bg-1n fc-white' : 'bg-6n'}`} onClick={() => handleSlideTo(1)}>Fins de carrière</button>
-              <button key={2} type="button" className={`round pr-10 pl-10 pt-5 pb-5 ${activeIndex === 1 ? 'bg-1n fc-white' : 'bg-6n'}`} onClick={() => handleSlideTo(2)}>Inter-missions</button>
-              <button key={3} type="button" className={`round pr-10 pl-10 pt-5 pb-5 ${activeIndex === 2 ? 'bg-1n fc-white' : 'bg-6n'}`} onClick={() => handleSlideTo(3)}>Marque employeur</button>
-              <button key={4} type="button" className={`round pr-10 pl-10 pt-5 pb-5 ${activeIndex === 3 ? 'bg-1n fc-white' : 'bg-6n'}`} onClick={() => handleSlideTo(4)}>Développement RH</button>
-              <button key={5} type="button" className={`round pr-10 pl-10 pt-5 pb-5 ${activeIndex === 4 ? 'bg-1n fc-white' : 'bg-6n'}`} onClick={() => handleSlideTo(5)}>Retour en emploi</button>
-            </div>
-          </div>
-          <div className="col-6 col-12-m ac-center">
-            <Swiper
-              spaceBetween={20}
-              slidesPerView={'auto'}
-              className='grab max-w-400 navigation-card-swiper'
-              loop={false}
-              centeredSlides={false}
-              onSwiper={(swiper) => (swiperRef.current = swiper)}
-              onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-            >
-              <SwiperSlide key={1} className='round-20 bg-white p-30'>
-                <h5 className="fs-20 mb-10 fw-6 fc-1n">Fins de carrière</h5>
-                <p>Proposez à des collaborateurs seniors une transition vers une retraite active et engagée.</p>
-              </SwiperSlide>
-              <SwiperSlide key={2} className='round-20 bg-white p-30'>
-                <h5 className="fs-20 mb-10 fw-6 fc-1n">Inter-missions</h5>
-                <p>Gardez vos collaborateurs actifs, motivés et engagés lors de périodes d'inter-projet.</p>
-              </SwiperSlide>
-              <SwiperSlide key={3} className='round-20 bg-white p-30'>
-                <h5 className="fs-20 mb-10 fw-6 fc-1n">Marque employeur</h5>
-                <p>Proposez une expérience collaborateur individualisée et riche de sens pour attirer et fidéliser vos talents.</p>
-              </SwiperSlide>
-              <SwiperSlide key={4} className='round-20 bg-white p-30'>
-                <h5 className="fs-20 mb-10 fw-6 fc-1n">Développement RH</h5>
-                <p>Permettez à des collaborateurs d'enrichir leurs compétences techniques et humaines dans un environnement challengeant.</p>
-              </SwiperSlide>
-              <SwiperSlide key={5} className='round-20 bg-white p-30'>
-                <h5 className="fs-20 mb-10 fw-6 fc-1n">Retour en emploi</h5>
-                <p>Proposez un parcours progressif de retour en entrerprise après un arrêt de travail long (maladie, parentalité...).</p>
-              </SwiperSlide>
-            </Swiper>
-          </div>
+          <Cards></Cards>
         </div>
       </div>
 
@@ -150,10 +110,17 @@ export default function Page() {
           <div className="col-6 col-12-m">
             <h2 className="fc-1n fs-16">Nos services</h2>
             <h2 className="mb-10 md-resp-pt-20 fs-30">Demain vous accompagne à chaque étape</h2>
-            <p className="mb-20">Demain Works vous accompagne afin de définir un programme sur-mesure qui réponde à vos problématiques RH et aux attentes de vos collaborateurs en matière d'engagement sociétal</p>
+            <p className="mb-40">Nous accompagnons les entreprises de bout en bout sur des missions de mécénat de compétences à fort impact.</p>
+            <Dots></Dots>
           </div>
           <div className="col-6 col-12-m ac-center">
-
+            <Image
+              src="/companies/comp_1.svg"
+              alt="Personnage à l'écoute"
+              width="300"
+              height="300"
+              className='w-100 h-100 max-h-300 scale-down block'
+            />
           </div>
         </div>
       </div>
