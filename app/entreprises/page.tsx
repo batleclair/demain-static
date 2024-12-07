@@ -2,21 +2,12 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import { Dots } from '@/app/entreprises/dots'
 import { Cards } from '@/app/entreprises/cards'
 
 export default function Page() {
-  const cardsRef = useRef(null);
-
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleSlideTo = (index: number, ref: any) => {
-    if (ref.current) ref.current.slideTo(index - 1);
-  };
-
 
   return (
     <div>
@@ -28,10 +19,10 @@ export default function Page() {
               <h1 className='mb-20 fs-40 fw-5'>Demain.Works vous aide à opérer du mécénat de <span className='highlight fw-6 fc-1n'>compétences</span></h1>
               <p className='mb-20'>Permettez à vos collaborateurs de partager leurs compétences professionnelles auprès d'associations sur leur temps de travail</p>
               <div className="flex gap-20">
-                <Link href="/associations" className='btn-h hover 3g-white bg-to-2l fc-1n fw-5 w-100 text-middle'>
+                <Link href="#services" className='btn-h hover bg-white bg-to-2l fc-1n fw-5 w-100 text-middle border-1n'>
                   Nos services
                 </Link>
-                <Link href="/entreprises" className='btn-h hover 3g-1n bg-to-1d fc-white fw-5 w-100 text-middle'>
+                <Link href="/contact" className='btn-h hover bg-1n bg-to-1d fc-white fw-5 w-100 text-middle'>
                   Nous contacter
                 </Link>
               </div>
@@ -105,7 +96,7 @@ export default function Page() {
       </div>
 
 
-      <div className="ctn flex dir-col ai-center bg-white pt-40 pb-40">
+      <div id="services" className="ctn flex dir-col ai-center bg-white pt-40 pb-40">
         <div className="row grid-gap-30 mb-20 max-w-1200">
           <div className="col-6 col-12-m">
             <h2 className="fc-1n fs-16">Nos services</h2>
@@ -132,7 +123,7 @@ export default function Page() {
           <p className='text-middle mb-20'>L'équipe Demain.Works est à votre écoute. Laissez-nous vos coordonnées afin d'échanger sur vos besoins et vos objectifs.</p>
           <Link
             className="btn-h fc-white bg-1n bg-to-1d"
-            href=""
+            href="/contact"
           >
             Nous contacter
           </Link>

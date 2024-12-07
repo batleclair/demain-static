@@ -181,7 +181,7 @@ export default function Home() {
 
       <div className="ctn bg-6l pb-40">
         <div className="pt-20 pb-20 mb-10">
-          <h2 className="fc-1n fs-20 flex ai-center jc-center"><span className='fw-9 icon fs-30 w-40px block'>add</span> d'impact pour les association</h2>
+          <h2 className="fc-1n fs-20 flex ai-center jc-center"><span className='fw-9 icon fs-30 w-40px block'>add</span> d'impact pour les associations</h2>
           <p className='text-middle'>Nous collaborons avec des associations & fondations d'intérêt général partout en France</p>
         </div>
         <AssoLogos></AssoLogos>
@@ -237,7 +237,7 @@ export default function Home() {
           <p className='text-middle mb-20'>L'équipe Demain.Works est à votre écoute. Laissez-nous vos coordonnées afin d'échanger sur vos besoins et vos objectifs.</p>
           <Link
             className="btn-h fc-white bg-1n bg-to-1d"
-            href=""
+            href="/contact"
           >
             Nous contacter
           </Link>

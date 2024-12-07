@@ -56,7 +56,7 @@ export function Navbar() {
 
           <Link
             className="w-100px  mr-10 ml-10 btn-h fc-white bg-1n bg-to-1d"
-            href=""
+            href="/contact"
             onClick={menuToggle}
           >
             Contact
