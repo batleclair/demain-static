@@ -37,10 +37,6 @@ $heights: 10, 20, 25, 30, 40, 50, 100, 150, 200, 300, 400, 500;
   height: auto;
 }
 
-.min-h-screen{
-  height: calc(100vh - 50px);
-}
-
 .w-none{
   width: 0;
 }
@@ -62,4 +58,8 @@ $heights: 10, 20, 25, 30, 40, 50, 100, 150, 200, 300, 400, 500;
     padding-left: 5vw;
     padding-right: 5vw;
   }
+}
+
+.min-h-screen{
+  min-height: calc(100vh - 350px);
 }

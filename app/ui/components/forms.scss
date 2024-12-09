@@ -1,16 +1,16 @@
 .text-input{
   font-family: $font-1;
-  font-size: 16;
-  padding: 5 10;
-  border-radius: 8;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 8px;
   border: 1px solid $clr-6d;
   +label{
-    padding: 2 5;
+    padding: 2px 5px;
     background-color: white;
     font-size: 12px;
     color: $clr-6d;
-    top: -12;
-    left: 5;
+    top: -12px;
+    left: 5px;
     transition: 0.1s ease-in-out;
   }
   &::placeholder{
@@ -22,7 +22,7 @@
     border-color: $clr-1n;
     background-color: $clr-2l;
     +label{
-      top: -20;
+      top: -20px;
       transition: 0.1s ease-in-out;
       background-color: rgba(255,255,255,0);
       color: $clr-1n;
@@ -32,7 +32,7 @@
 
 .radio-input{
   .radio-title{
-    padding: 5 10;
+    padding: 5px 10px;
     font-size: 12px;
     color: $clr-6d;
   }
@@ -42,21 +42,21 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 16;
+      font-size: 16px;
       color: $clr-6d;
       position: relative;
       &::before{
         content: '';
-        padding: 10;
-        font-size: 0;
+        padding: 10px;
+        font-size: 0px;
         background-color: white;
         border-radius: 100%;
         border: solid 1px $clr-6d;
       }
       &::after{
         content: '';
-        padding: 10;
-        font-size: 0;
+        padding: 10px;
+        font-size: 0px;
         background-color: $clr-1n;
         border-radius: 100%;
         scale: 0%;

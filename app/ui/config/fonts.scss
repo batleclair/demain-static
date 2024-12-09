@@ -22,7 +22,7 @@ body {
   }
 }
 
-@for $i from 4 through 20 {
+@for $i from 4 through 40 {
   .fs-#{$i * 2}{
     font-size: #{$i * 2}px;
   }

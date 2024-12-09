@@ -18,14 +18,14 @@ export function Navbar() {
       <nav className={`ctn navbar flex w-100 ai-center ${ expanded ? "expanded" : "" }`}>
         <Link href="/">
           <Image
-            src="/logo_dark.svg"
+            src="/logos/logo_dark.png"
             alt="Logo de Demain Works"
             width="200"
             height="40"
             className="logo-dark"
           />
           <Image
-            src="/logo_white.svg"
+            src="/logos/logo_white.png"
             alt="Logo de Demain Works"
             width="200"
             height="40"

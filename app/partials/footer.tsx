@@ -4,11 +4,11 @@ import Image from 'next/image'
 export function Footer() {
 
   return (
-    <footer className="bg-1n ctn h-100 pt-40 pb-40">
+    <footer className="bg-1n ctn pt-40 pb-40">
       <div className="row grid-gap-20 max-w-1000">
         <div className="col-6 col-12-m">
           <div className="mb-20 max-w-500">
-            <Image src="/logo_white.svg"
+            <Image src="/logos/logo_white.png"
                   alt="Logo de Demain Works"
                   width="200"
                   height="60"
@@ -36,7 +36,7 @@ export function Footer() {
         <div className="col-2 col-12-m">
           <p className='fc-white mt-20 mb-30'>DEMAIN WORKS</p>
           <ul>
-            <li className='mb-10'><Link href="/about" className='fc-white fw-3'>A propos</Link></li>
+            <li className='mb-10'><Link href="/a-propos" className='fc-white fw-3'>A propos</Link></li>
             <li className='mb-10'><Link href="/" className='fc-white fw-3'>Mentions légales</Link></li>
             <li className='mb-10'><Link href="/" className='fc-white fw-3'>Confidentialité</Link></li>
           </ul>
