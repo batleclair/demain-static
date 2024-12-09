@@ -9,7 +9,7 @@ export default function Page() {
   const [isFormValid, setIsFormValid] = useState(false);
 
   const validateForm = (contactForm: FormData) => {
-    let validationErrors = {};
+    const validationErrors = {};
 
     if (contactForm.get("password") !== '') {
       validationErrors.password = 'Mot de passe';
