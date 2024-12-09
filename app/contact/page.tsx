@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image'
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 
 export default function Page() {
   interface ValidationErrors {
@@ -53,16 +53,15 @@ export default function Page() {
     return validationErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const contactForm = new FormData(e.target)
+    const contactForm = new FormData(e.target as HTMLFormElement)
     const validationErrors = validateForm(contactForm);
     setErrors(validationErrors);
 
     if (Object.keys(validationErrors).length === 0) {
         setIsFormValid(true);
-        console.log("c'est ok")
-        e.target.submit();
+        (e.target as HTMLFormElement).submit();
     } else {
         setIsFormValid(false);
         console.log('Le formulaire comporte des erreurs, merci de les corriger');
