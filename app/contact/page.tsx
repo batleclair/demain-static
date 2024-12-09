@@ -4,12 +4,21 @@ import Image from 'next/image'
 import { useState } from 'react';
 
 export default function Page() {
+  interface ValidationErrors {
+    password?: string;
+    orgType?: string;
+    org?: string;
+    firstName?: string;
+    lastName?: string;
+    email?: string;
+    phone?: string;
+  }
   const [orgType, setOrgType] = useState("");
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<ValidationErrors>({});
   const [isFormValid, setIsFormValid] = useState(false);
 
   const validateForm = (contactForm: FormData) => {
-    const validationErrors = {};
+    const validationErrors: ValidationErrors = {};
 
     if (contactForm.get("password") !== '') {
       validationErrors.password = 'Mot de passe';
@@ -33,7 +42,7 @@ export default function Page() {
 
     if (!contactForm.get("email")) {
         validationErrors.email = 'Adresse requise';
-    } else if (!/\S+@\S+\.\S+/.test(contactForm.get("email"))) {
+    } else if (!/\S+@\S+\.\S+/.test(contactForm.get("email") as string)) {
         validationErrors.email = 'Adresse invalide';
     }
 
